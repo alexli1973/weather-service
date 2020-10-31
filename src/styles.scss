@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a { text-decoration: none ; color: black;}
+input {
+  background-color: white;
+  color: black;
+  padding: 9px 20px;
+  margin: 8px 0;
+  border: 1px solid #2ac4ee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: #2ac4ee;
+  color: black;
+}
+
+.main-layout {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+//cards
+.weather-card {
+  max-width: 400px;
+}

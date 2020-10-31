@@ -1,0 +1,33 @@
+.mat-card {
+  background: #5bccec;
+}
+
+mat-card-content {
+  background-image: url("/assets/images/bg.png");
+  background-size: contain;
+  margin-bottom: 0;
+  .main-content {
+    .data {
+      h5 {
+        font-size: 40px;
+        font-weight: 500;
+      }
+      span {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+mat-card-actions {
+  .bottom-content {
+    justify-content: space-between;
+    padding: 10px;
+  }
+}
+
+.bottom-content, .main-content, {
+  display: flex;
+  align-items: center;
+
+}

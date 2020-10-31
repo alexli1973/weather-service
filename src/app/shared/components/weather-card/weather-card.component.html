@@ -1,0 +1,23 @@
+<!--<mat-card class="mat-elevation-z5" [routerLink]="['/weather']" [queryParams]="{id: weatherData.city.id}">-->
+<mat-card class="weather-card mat-elevation-z5">
+  <mat-card-header>
+    <mat-card-title>{{weatherData.city.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="main-content">
+      <img [src]="weatherData.icon" alt="weatherData.category">
+      <div class="data">
+        <h5 class="temp">{{weatherData.temp}}&deg;</h5>
+        <span class="category">{{weatherData.category}}</span>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="bottom-content">
+      <span>Air Pressure: {{weatherData.pressure}}</span>
+      <span>Humidity: {{weatherData.humidity}}</span>
+    </div>
+  </mat-card-actions>
+</mat-card>
+
+

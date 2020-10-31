@@ -1,0 +1,28 @@
+<form #weatherForm="ngForm" class="weatherForm">
+  <input matInput
+         placeholder="Search for a city..."
+         [formControl]="control"
+         [matAutocomplete]="auto"
+  >
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)='getCurrentCityName($event.option.value)'
+  >
+    <mat-option *ngFor="let city of citiesList" [value]="city.name">
+      {{city.name}}
+    </mat-option>
+  </mat-autocomplete>
+  <button
+    mat-flat-button
+    color="primary"
+    [disabled]="isDisabled"
+    (click)="getWeatherData()"
+  >Update</button>
+</form>
+
+<div *ngIf="weatherData">
+  <app-weather-card [weatherData]="weatherData"></app-weather-card>
+</div>
+<div *ngIf="historyData.temp && !weatherData">
+  <app-weather-card [weatherData]="historyData"></app-weather-card>
+</div>
